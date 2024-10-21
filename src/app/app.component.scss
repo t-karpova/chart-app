@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  list-style: none;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.source {
+  flex-direction: column;
+
+  li {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .title {
+    font-weight: 600;
+  }
+}

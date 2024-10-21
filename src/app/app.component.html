@@ -1,0 +1,52 @@
+<ul class="nav">
+  <li>
+    <button (click)="reloadChart('line')">Line</button>
+  </li>
+  <li>
+    <button (click)="reloadChart('bar')">Bar</button>
+  </li>
+  <li>
+    <button (click)="reloadChart('doughnut')">Doughnut</button>
+  </li>
+</ul>
+<div class="chart-container">
+  <canvas id="MyChart">{{ chart }}</canvas>
+</div>
+<ul class="source" *ngIf="!!data?.source">
+  <li>
+    <span class="title">source_name</span>
+    <span class="value">{{data.source[0].annotations.source_name}}</span>
+  </li>
+  <li>
+    <span class="title">source_description</span>
+    <span class="value">{{data.source[0].annotations.source_description}}</span>
+  </li>
+  <li>
+    <span class="title">dataset_name</span>
+    <span class="value">{{data.source[0].annotations.dataset_name}}</span>
+  </li>
+  <li>
+    <span class="title">dataset_link</span>
+    <span class="value">{{data.source[0].annotations.dataset_link}}</span>
+  </li>
+  <li>
+    <span class="title">table_id</span>
+    <span class="value">{{data.source[0].annotations.table_id}}</span>
+  </li>
+  <li>
+    <span class="title">topic</span>
+    <span class="value">{{data.source[0].annotations.topic}}</span>
+  </li>
+  <li>
+    <span class="title">subtopic</span>
+    <span class="value">{{data.source[0].annotations.subtopic}}</span>
+  </li>
+  <li>
+    <span class="title">name</span>
+    <span class="value">{{data.source[0].name}}</span>
+  </li>
+  <li>
+    <span class="title">substitutions</span>
+    <span class="value">{{data.source[0].substitutions}}</span>
+  </li>
+</ul>
